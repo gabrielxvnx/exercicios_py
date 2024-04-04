@@ -1,38 +1,31 @@
-nota1 = float(input("Qual sua primeira nota?"))
-nota2 = float(input("Qual sua segunda nota?"))
-notas = nota1 + nota2 / 2
+# Solicita as notas do usuário
+nota1 = float(input("Qual sua primeira nota? "))
+nota2 = float(input("Qual sua segunda nota? "))
 
+# Calcula a média corretamente
+media = (nota1 + nota2) / 2
 
-if notas <= 4:
-    print(f"Suas notas foram {nota1} e {nota2} e sua media foi {notas}! Conceito E")
-elif notas <= 6:
-    print(f"Suas notas foram {nota1} e {nota2} e sua media foi {notas}! Conceito D")
-elif notas <= 7.5:
-    print(f"Suas notas foram {nota1} e {nota2} e sua media foi {notas}! Conceito C")
-elif notas <= 9.0:
-    print(f"Sua media foi {notas}! Conceito B")
-elif notas >= 9.0:
-    print(f"Sua media foi {notas}! Conceito A")
+# Define a função para determinar o conceito
+def determina_conceito(media):
+    if media >= 9.0:
+        return 'A'
+    elif media >= 7.5:
+        return 'B'
+    elif media >= 6.0:
+        return 'C'
+    elif media >= 4.0:
+        return 'D'
+    else:
+        return 'E'
 
-if notas >= 6:
+# Obtém o conceito com base na média
+conceito = determina_conceito(media)
+
+# Imprime os resultados
+print(f"Suas notas foram {nota1} e {nota2} e sua média foi {media}! Conceito {conceito}")
+
+# Verifica se o aluno está aprovado ou reprovado
+if media >= 6:
     print("Aprovado")
 else:
     print("Reprovado")
-
-
-nota1 = float(input('Nota 1:'))
-nota2 = float(input('Nota 2:'))
-media = 0
-
-def calcula_media(nota1, nota2):
-    media = (nota1+nota2)/2
-    return media
-
-def verifica_media():
-    if media >= 9:
-        conceito = 'A'
-    elif :
-        conceito = 'B'
-    return conceito 
-    
-print(f'{nota1} e {nota2}. Media {calcula_media(nota1,nota2)}. E Conceito {verifica_media()}')        
