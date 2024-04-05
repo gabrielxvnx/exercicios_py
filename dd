@@ -1,0 +1,54 @@
+Para modularizar o código em diferentes arquivos, você pode separar as classes e a função principal em arquivos distintos. Aqui está uma sugestão de como você pode organizar os arquivos:
+
+banco_de_dados.py: Contém a classe BancoDeDados.
+questionario.py: Contém a classe Questionario.
+main.py: Contém a função main e a lógica de execução do programa.
+Aqui está um exemplo de como ficariam os arquivos:
+
+banco_de_dados.py
+
+Python
+
+import csv
+
+class BancoDeDados:
+    def __init__(self):
+        # ... (restante do código da classe)
+
+    def adicionar_resposta(self, respostas):
+        # ... (restante do código do método)
+
+    def salvar_em_csv(self, nome_arquivo):
+        # ... (restante do código do método)
+Código gerado por IA. Examine e use com cuidado. Mais informações em perguntas frequentes.
+questionario.py
+
+Python
+
+from datetime import datetime, timedelta
+
+class Questionario:
+    def __init__(self):
+        # ... (restante do código da classe)
+
+    def obter_resposta(self, mensagem, opcoes):
+        # ... (restante do código do método)
+
+    def transformar_resp(self, r):
+        # ... (restante do código do método)
+
+    def coletar_dados(self):
+        # ... (restante do código do método)
+Código gerado por IA. Examine e use com cuidado. Mais informações em perguntas frequentes.
+main.py
+
+Python
+
+from banco_de_dados import BancoDeDados
+from questionario import Questionario
+
+def main():
+    # ... (restante do código da função)
+
+if __name__ == '__main__':
+    main()
