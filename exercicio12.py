@@ -11,11 +11,11 @@ fgts = salario_bruto * 0.11
 #ir
 if salario_bruto <= 900:
         ir = 0
-    elif salario_bruto <= 1500:
+elif salario_bruto <= 1500:
         ir = salario_bruto * 0.05
-    elif salario_bruto <= 2500:
+elif salario_bruto <= 2500:
         ir = salario_bruto * 0.10
-    else:
+else:
         ir = salario_bruto * 0.20
 inss = salario_bruto * 0.10
 
